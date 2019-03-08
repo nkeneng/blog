@@ -1,0 +1,15 @@
+easy_admin:
+  entities:
+    Articles:
+      class: App\Entity\Articles
+      form:
+        fields:
+          - { property: 'title'}
+          - { property: 'slug'}
+          - { property: 'content'}
+          - { property: 'created_at'}
+          - { property: 'imageFile',label: 'Image',type: 'file', css_class: 'custom-file-input'}
+      list:
+        actions:
+          - { name: 'edit', icon: 'pencil', label: false }
+          - { name: 'delete', icon: 'trash', label: false }

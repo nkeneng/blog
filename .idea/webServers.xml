@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="86c2766a-7a70-46fc-a7dc-55b18aa79fa8" name="junior" url="http://ftp.cluster023.hosting.ovh.net">
+        <fileTransfer host="ftp.cluster023.hosting.ovh.net" port="21" rootFolder="/junior">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

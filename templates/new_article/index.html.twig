@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NewArticleController!{% endblock %}
+
+{% block body %}
+    <div class="body">
+        <div id="login">
+            <h3 class="text-center text-white pt-5">New Article</h3>
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-6">
+                        <div id="login-box" class="col-md-12">
+                            <div id="login-form" class="form">
+                                {{ form_start(formArticle) }}
+
+                                {{ form_row(formArticle.title ) }}
+
+                                {{ form_row(formArticle.content) }}
+
+                                {{ form_row(formArticle.category) }}
+                                <div class="input-group margin-top-20">
+                                    <div class="input-group-prepend">
+                                {{ form_row(formArticle.imageFile ) }}
+                                    </div>
+                                </div>
+                                <input type="submit" name="submit" class="btn btn-info btn-md margin-top-10" value="submit"/>
+                                {{ form_end(formArticle) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

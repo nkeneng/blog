@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-md  navbar-light fixed-top py-3 " id="navbar">
+    <div class="container-fluid">
+        <a href="#home" class="navbar-brand">
+            My Blog</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav" aria-controls="#mynav"
+                aria-label="toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <section class="collapse navbar-collapse" id="mynav">
+            <div class="navbar-nav text-uppercase ml-auto">
+                <a class="nav-item nav-link text-dark" href="{{ path('home') }}">Articles</a>
+                {% if app.user %}
+                    <a class="nav-item nav-link text-dark" href="{{ path('new_article') }}">new article</a>
+                    <a class="nav-item nav-link text-dark" href="#">profile</a>
+                    <a class="nav-item nav-link text-dark" href="{{ path('fos_user_security_logout') }}">logout</a>
+                {% else %}
+                    <a class="nav-item nav-link text-dark" href="{{ path('fos_user_security_login') }}">Login</a>
+                {% endif %}
+
+            </div>
+        </section>
+    </div>
+</nav>

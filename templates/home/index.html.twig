@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello HomeController!{% endblock %}
+{% block body %}
+    {{ parent() }}
+    {% if form is defined %}
+    {% include 'home/search.html.twig' %}
+    {% endif %}
+    {% include 'home/content.html.twig' %}
+
+{% endblock %}

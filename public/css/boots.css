@@ -1,0 +1,12 @@
+.contpost {
+    margin-top: 10px;
+}
+.PostTitle {
+    padding: 5px;
+}
+.PostDate {
+    float: right;
+    font-size: 14px;
+    margin-top: -26px;
+    margin-right: 10px;
+}
