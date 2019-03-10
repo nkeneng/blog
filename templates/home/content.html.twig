@@ -1,47 +1,28 @@
-<div class="container py-4">
-    <h2 class="card-header display-4 text-center"><i class="ion-person"></i>Blog post</h2>
-    <div class="row p-2">
-        {% for article in paginator %}
-            <div class="col-sm-6 contpost">
-                <div class="row">
-                    <div class="col PostTitle">
-                        <h4><a href="{{ path('show', {slug: article.slug}) }}">{{ article.title }}</a></h4>
-                        <div class="PostDate"><i class="fa fa-calendar"></i>{{ article.createdAt | date('d/m/y') }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                    <span class="thumbnail">
-                       {% if article.imageFile %}
-                           <img  src="/images/Articles/{{ article.imageName }}" alt="picture">
-                           {#<img src="{{ vich_uploader_asset(article, 'imageName') | imagine_filter('my_thumb')}}" alt="picture">#}
-                           {% else %}
-                           <img  style="width: 110%;" src="{{ article.imageName }}" alt="">
-                           {#| imagine_filter('my_thumb')#}
-                       {% endif %}
-                   </span>
-                    </div>
-                    <div class="col-sm-6">
-                        {{ ((article.content|length > 50 )? article.content|slice(0, 130) ~ '...' : article.content)|raw }}
-                        <p><a href="{{ path('show', {slug: article.slug}) }}" class="btn btn-success">lire la
-                                suite</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center small p-2">
-                        <p>
-                            <i class="fa fa-user-circle"></i> by <a href="#">{{ article.user }}</a>
-                            <i class="fa fa-comment"></i> <a href="#">{{ article.comments|length }}Commentaires</a>
-                        </p>
+<div id="fh5co-main">
+    <div class="fh5co-narrow-content">
+        <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Read Our Blog</h2>
+        <div class="row row-bottom-padded-md">
+            {% for article in paginator %}
+            <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+                <div class="blog-entry">
+                    <a href="#" class="blog-img"><img  style="width: 110%;" src="{{ article.imageName }}" class="img-responsive"
+                                                      alt="steven"></a>
+                    <div class="desc">
+                        <h3><a href="{{ path('show', {slug: article.slug}) }}">{{ article.title }}</a></h3>
+                        <span><small>by {{ article.user }} </small> / <small> {{ article.category }} </small> / <small> <i
+                                        class="icon-comment"></i>{{ article.comments|length }} Commentaires</small></span>
+                        <p> {{ ((article.content|length > 50 )? article.content|slice(0, 130) ~ '...' : article.content)|raw }}</p>
+                        <a href="{{ path('show', {slug: article.slug}) }}" class="lead">Read More <i class="icon-arrow-right3"></i></a>
                     </div>
                 </div>
             </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
         <div class="margin-bottom-30">
             {#{% if form is defined %}#}
             {{ knp_pagination_render(paginator) }}
             {#{% endif %}#}
         </div>
     </div>
+
 </div>
