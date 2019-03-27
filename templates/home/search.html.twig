@@ -1,12 +1,17 @@
-<div class="container-fluid margin-top-70">
+<div class="container-fluid my-5">
         {{ form_start(form) }}
-        <div class="row">
-            <div class="offset-md-8 col-md-3 px-0">
+        <div class="row mx-5">
+            <div class="offset-md-8 col-md-3 margin-top-5 padding-right-none">
                 {{ form_row(form.category) }}
             </div>
-            <div class="col-md-1 px-0">
-                <button class="btn btn-primary btn-lg">search</button>
+            <div class="col-md-1 padding-left-none">
+                <a class="btn btn-primary btn-md">search</a>
             </div>
         </div>
         {{ form_end(form) }}
 </div>
+
+{#<div class="search">#}
+    {#<input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />#}
+    {#<button type="submit" class="btn btn-primary btn-sm">Search</button>#}
+{#</div>#}

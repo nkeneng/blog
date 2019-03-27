@@ -21,11 +21,13 @@
                 <p class="dark-grey-text">{{ ((article.content|length > 50 )? article.content|slice(0, 130) ~ '...' : article.content)|raw }}
                     .</p>
                 <!-- Read more button -->
-                <a href="{{ path('show', {slug: article.slug}) }}" class="btn btn-pink btn-round btn-md">Read more</a>
+                  <a href="{{ path('show', {slug: article.slug}) }}" class="btn btn-pink btn-round btn-md text-center">Read more</a>
             </div>
         {% endfor %}
     </div>
-    <div class="margin-bottom-30">
+    <div class="row my-5">
+        <div class="offset-4">
         {{ knp_pagination_render(paginator) }}
+        </div>
     </div>
 </div>

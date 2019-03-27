@@ -27,7 +27,7 @@ class ArticlesSearchType extends AbstractType
                 'label_attr' => array('class' => 'sr-only'),
                 'label' => 'Category',
                 'attr' => [
-                    'class' => 'form-control border-postul',
+                    'class' => 'form-control input-sm',
                     'placeholder' => 'entrez votre categorie'
                 ]));
     }

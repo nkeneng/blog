@@ -1,4 +1,4 @@
-{#<nav class="navbar navbar-expand-md  navbar-light fixed-top py-3 " id="navbar">
+<nav class="navbar navbar-expand-md navbar-light py-3 bg-primary bold" id="navbar">
     <div class="container-fluid">
         <a href="#home" class="navbar-brand">
             My Blog</a>
@@ -20,46 +20,46 @@
             </div>
         </section>
     </div>
-</nav>#}
+</nav>
 
-    <nav class="navbar navbar-expand-lg bg-info">
-        <div class="container-fluid">
-            <div class="navbar-translate">
-                <a class="navbar-brand" href="#0">My Blog</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="active nav-item">
-                        <a href="{{ path('home') }}" class="nav-link">
-                            Articles
-                        </a>
-                    </li>
-                    {% if app.user %}
-                    <li class="nav-item">
-                        <a href="{{ path('new_article') }}" class="nav-link">
-                            new article
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ path('fos_user_security_logout') }}" class="nav-link">
-                            logout
-                        </a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a href="{{ path('fos_user_security_login') }}" class="nav-link">
-                            login
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </nav>
+    {#<nav class="navbar navbar-expand-md bg-info navbar-dark">#}
+        {#<div class="container-fluid">#}
+            {#<div class="navbar-translate">#}
+                {#<a class="navbar-brand" href="#0">My Blog</a>#}
+                {#<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">#}
+                    {#<span class="sr-only">Toggle navigation</span>#}
+                    {#<span class="navbar-toggler-icon"></span>#}
+                    {#<span class="navbar-toggler-icon"></span>#}
+                    {#<span class="navbar-toggler-icon"></span>#}
+                {#</button>#}
+            {#</div>#}
+            {#<div class="collapse navbar-collapse">#}
+                {#<ul class="navbar-nav ml-auto">#}
+                    {#<li class="active nav-item">#}
+                        {#<a href="{{ path('home') }}" class="nav-link">#}
+                            {#Articles#}
+                        {#</a>#}
+                    {#</li>#}
+                    {#{% if app.user %}#}
+                    {#<li class="nav-item">#}
+                        {#<a href="{{ path('new_article') }}" class="nav-link">#}
+                            {#new article#}
+                        {#</a>#}
+                    {#</li>#}
+                    {#<li class="nav-item">#}
+                        {#<a href="{{ path('fos_user_security_logout') }}" class="nav-link">#}
+                            {#logout#}
+                        {#</a>#}
+                    {#</li>#}
+                    {#{% else %}#}
+                    {#<li class="nav-item">#}
+                        {#<a href="{{ path('fos_user_security_login') }}" class="nav-link">#}
+                            {#login#}
+                        {#</a>#}
+                    {#</li>#}
+                    {#{% endif %}#}
+                {#</ul>#}
+            {#</div>#}
+        {#</div>#}
+    {#</nav>#}
 
