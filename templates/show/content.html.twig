@@ -1,3 +1,58 @@
+{#<div class="container">#}
+    {#<section class="my-5">#}
+
+        {#<!-- Grid row -->#}
+        {#<div class="row">#}
+
+            {#<!-- Grid column -->#}
+            {#<div class="col-md-12">#}
+
+                {#<!-- Newsfeed -->#}
+                {#<div class="mdb-feed">#}
+
+                    {#<div class="news">#}
+
+                        {#<!-- Label -->#}
+                        {#<div class="label">#}
+                            {#<img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(18)-mini.jpg"#}
+                                 {#class="rounded-circle z-depth-1-half">#}
+                        {#</div>#}
+
+                        {#<!-- Excerpt -->#}
+                        {#<div class="excerpt">#}
+
+                            {#<!-- Brief -->#}
+                            {#<div class="brief">#}
+                                {#<a class="name">Lili Rose</a> posted on his page#}
+                                {#<div class="date">2 days ago</div>#}
+                            {#</div>#}
+
+                            {#<!-- Added text -->#}
+                            {#<div class="added-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero#}
+                                {#inventore,#}
+                                {#iste quas libero eius? Vitae sint neque animi alias sunt dolor, accusantium ducimus, non#}
+                                {#placeat#}
+                                {#voluptate.#}
+                            {#</div>#}
+
+                            {#<!-- Feed footer -->#}
+                            {#<div class="feed-footer">#}
+                                {#<a class="like">#}
+                                    {#<i class="fas fa-heart"></i>#}
+                                    {#<span>7 likes</span>#}
+                                {#</a>#}
+                            {#</div>#}
+
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</section>#}
+
+{#</div>#}
+
+
 <div class="container">
     <div class="row margin-top-20">
         <div class="col-md-6">
@@ -11,7 +66,8 @@
             <h4 class="bold center-align">{{ article.title }}</h4>
             <p style="font-weight:bold;"> Created the {{ article.createdAt | date('d/m/y') }}
                 at {{ article.createdAt | date('H:i') }}
-                in the Category <br><a  href="{{ path('category', {id: article.category.id}) }}" class="font-italic bg-danger">{{ article.category.name }}</a></p>
+                in the Category <br><a href="{{ path('category', {id: article.category.id}) }}"
+                                       class="font-italic bg-danger">{{ article.category.name }}</a></p>
             <span class="text-justify">{{ article.content | raw }}</span>
         </div>
     </div>

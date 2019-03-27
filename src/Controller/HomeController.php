@@ -25,9 +25,9 @@ class HomeController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form["category"]->getData();
-            $list = $paginator->paginate($this->getDoctrine()->getRepository(Articles::class)->findByCategory($data), $request->query->getInt('page', 1), 4);
+            $list = $paginator->paginate($this->getDoctrine()->getRepository(Articles::class)->findByCategory($data), $request->query->getInt('page', 1), 3);
         } else
-            $list = $paginator->paginate($this->getDoctrine()->getRepository(Articles::class)->findAll(), $request->query->getInt('page', 1), 4);
+            $list = $paginator->paginate($this->getDoctrine()->getRepository(Articles::class)->findAll(), $request->query->getInt('page', 1), 3);
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',

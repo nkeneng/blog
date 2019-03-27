@@ -15,33 +15,27 @@
         <meta name="twitter:card" content="" />
     {% endblock %}
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-    {% block stylesheets %}
-        <link href="{{ asset('css/material-kit.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/icomoon.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-        {#<link href="{{ asset('css/style2.css') }}" rel="stylesheet">#}
-        <link href="{{ asset('css/margin.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"
-              type="text/css">
+    {% block fonts %}
+        {#<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"#}
+              {#type="text/css">#}
+        {#<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display:400,700i" rel="stylesheet">#}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     {% endblock %}
+
+    {% block stylesheets %}
+        <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/mdb.lite.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    {% endblock %}
+
 </head>
 <body>
 {% block body %}
         {% include 'nav.html.twig' %}
 {% endblock %}
 {% block javascripts %}
-    <script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>
-    <script src="{{ asset('js/respond.min.js') }}"></script>
     <script src="{{ asset('jquery/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('jquery/jquery.easing.1.3.js') }}"></script>
-    <script src="{{ asset('jquery/jquery.flexslider-min.js') }}"></script>
     <script src="{{ asset('jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('jquery/jquery.waypoints.min.js') }}"></script>
     <script src="{{ asset('jquery/main.js') }}"></script>
