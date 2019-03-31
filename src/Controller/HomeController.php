@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      * @param PaginatorInterface $paginator
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
